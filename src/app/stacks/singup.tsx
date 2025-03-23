@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabase";  // Importa a configuração do Supabase
+import { supabase } from "../lib/supabase";  
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -11,7 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { EnvelopeSimple, LockKey, User, Eye, EyeSlash } from "phosphor-react-native";
+import { EnvelopeSimple, LockKey, User, Eye, EyeSlash, ArrowLeft } from "phosphor-react-native";
 
 export default function SignUp() {
   const router = useRouter();
@@ -44,13 +44,8 @@ export default function SignUp() {
       return;
     }
 
-    // Salva o nome do usuário no AsyncStorage
     await AsyncStorage.setItem("user_name", name);
     await AsyncStorage.setItem("user_email", email);
-    // Salve o avatar aqui, se necessário
-
-
-
 
     Alert.alert("Sucesso", "Verifique seu e-mail para confirmar sua conta!");
     router.push("../tabs/home");
@@ -58,6 +53,11 @@ export default function SignUp() {
 
   return (
     <View style={styles.container}>
+      {/* Botão de voltar */}
+      <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
+        <ArrowLeft size={32} color="#f4f4f4" />
+      </TouchableOpacity>
+
       <Text style={styles.welcome}>Crie sua conta</Text>
 
       <View style={styles.content}>
@@ -115,9 +115,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
   },
+  backButton: {
+    position: "absolute",
+    top: 50,
+    left: 20,
+  },
   welcome: {
     color: "#f4f4f4",
-    marginTop: 50,
+    marginTop: 150,
     fontSize: 24,
     fontWeight: "600",
   },

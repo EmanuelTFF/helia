@@ -1,22 +1,24 @@
 import { useRouter } from "expo-router";
-import { useEffect } from "react";
-import Login from "./stacks/login";
+import { useEffect, useState } from "react";
+import { View, ActivityIndicator } from "react-native";
 
 export default function Index() {
   const router = useRouter();
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      const isLoggedIn = false;
+    setIsMounted(true); // Indica que a tela foi montada
+  }, []);
 
-      if (isLoggedIn) {
-        return router.navigate("/tabs/home");
-      } else {
-        return <Login />;
-      }
-    }, 1000);
-    return () => clearTimeout(timeout);
-  }, [router]);
+  useEffect(() => {
+    if (isMounted) {
+      router.push("/stacks/welcome");
+    }
+  }, [isMounted, router]);
 
-  return <Login />;
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <ActivityIndicator size="large" color="#4CAF50" />
+    </View>
+  );
 }

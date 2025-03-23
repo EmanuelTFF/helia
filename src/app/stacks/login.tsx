@@ -34,16 +34,16 @@ export default function Login() {
 
         if (userData) {
             router.push({
-                pathname: "./tabs/home",
+                pathname: "../tabs/home",
                 params: { name: userData.name },
             });
         } else {
-            router.push("./tabs/home");
+            router.push("../tabs/home");
         }
     }
 
     function handleSignUp() {
-        router.push("./stacks/singup");
+        router.push("./singup");
     }
 
     return (
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     },
     wellcome: {
         color: "#f4f4f4",
-        marginTop: 50,
+        marginTop: 150,
         fontSize: 24,
         fontWeight: "600",
     },
