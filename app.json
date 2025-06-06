@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "helia",
+    "slug": "helia",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo-inicio.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo-inicio.png",
+        "backgroundColor": "#181a20"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/logo-inicio.png"
+    },
+    "splash": {
+      "image": "./assets/images/logo-inicio.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#181a20"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logo-inicio.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#181a20"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
