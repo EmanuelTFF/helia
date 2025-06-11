@@ -1,6 +1,6 @@
 
 
 export const supaUrl =
-    "https://dqmjfcmtcbkjtcsawgob.supabase.co"
+    "https://pyetqzwcuglgesbrddse.supabase.co"
 export const anonKey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRxbWpmY210Y2JranRjc2F3Z29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDI1OTM4MDQsImV4cCI6MjA1ODE2OTgwNH0.-h65dUCicw7e7b20Mt35J5L8_dIy37zLpXAfq-uRf20" 
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5ZXRxendjdWdsZ2VzYnJkZHNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk2Njc0MzIsImV4cCI6MjA2NTI0MzQzMn0.XlMw_hfuTC_nDOGF4Ly9PKMEq_FppJmOtE5apwGUXPA" 
