@@ -55,29 +55,29 @@ export default function SignUp() {
     <View style={styles.container}>
       {/* Botão de voltar */}
       <TouchableOpacity style={styles.backButton} onPress={() => router.back()}>
-        <ArrowLeft size={32} color="#f4f4f4" />
+        <ArrowLeft size={32} color="#5E503F" />
       </TouchableOpacity>
 
       <Text style={styles.welcome}>Crie sua conta</Text>
 
       <View style={styles.content}>
         <View style={styles.contentInput}>
-          <User size={32} color="#757575" />
+          <User size={32} color="#8B8B8B" />
           <TextInput
             placeholder="Seu primeiro nome"
             style={styles.input}
-            placeholderTextColor="#757575"
+            placeholderTextColor="#8B8B8B"
             value={name}
             onChangeText={setName}
           />
         </View>
 
         <View style={styles.contentInput}>
-          <EnvelopeSimple size={32} color="#757575" />
+          <EnvelopeSimple size={32} color="#8B8B8B" />
           <TextInput
             placeholder="Seu e-mail"
             style={styles.input}
-            placeholderTextColor="#757575"
+            placeholderTextColor="#8B8B8B"
             keyboardType="email-address"
             autoCapitalize="none"
             value={email}
@@ -86,17 +86,17 @@ export default function SignUp() {
         </View>
 
         <View style={styles.contentInput}>
-          <LockKey size={32} color="#757575" />
+          <LockKey size={32} color="#8B8B8B" />
           <TextInput
             placeholder="Sua senha"
             style={styles.input}
-            placeholderTextColor="#757575"
+            placeholderTextColor="#8B8B8B"
             secureTextEntry={!showPassword}
             value={password}
             onChangeText={setPassword}
           />
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-            {showPassword ? <Eye size={24} color="#757575" /> : <EyeSlash size={24} color="#757575" />}
+            {showPassword ? <Eye size={24} color="#8B8B8B" /> : <EyeSlash size={24} color="#8B8B8B" />}
           </TouchableOpacity>
         </View>
       </View>
@@ -111,7 +111,7 @@ export default function SignUp() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#181a20",
+    backgroundColor: "#F5F5F5", // Branco puro como fundo principal
     alignItems: "center",
     paddingHorizontal: 20,
   },
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     left: 20,
   },
   welcome: {
-    color: "#f4f4f4",
+    color: "#5E503F", // Terracota para o texto de boas-vindas
     marginTop: 150,
     fontSize: 24,
     fontWeight: "600",
@@ -135,16 +135,21 @@ const styles = StyleSheet.create({
   contentInput: {
     width: "100%",
     height: 56,
-    backgroundColor: "#1f222a",
+    backgroundColor: "#F0E6D2", 
     borderRadius: 12,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 20,
     gap: 10,
+    borderWidth: 1,
+    borderColor: "#D4D4D4", // Borda suave
   },
-  input: { flex: 1, color: "#f4f4f4" },
+  input: { 
+    flex: 1, 
+    color: "#6B6B6B", // Cor do texto mais escura
+  },
   buttonSignUp: {
-    backgroundColor: "#1ab55c",
+    backgroundColor: "#6B8E23", // Oliva suave para o botão
     width: "100%",
     height: 56,
     borderRadius: 32,
@@ -152,5 +157,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 40,
   },
-  buttonSignUpText: { color: "#f4f4f4", fontSize: 16, fontWeight: "800" },
+  buttonSignUpText: { 
+    color: "#F5F5F5", // Branco puro para o texto do botão
+    fontSize: 16, 
+    fontWeight: "800" 
+  },
 });

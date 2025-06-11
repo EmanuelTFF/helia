@@ -43,7 +43,7 @@ export default function Login() {
     }
 
     function handleSignUp() {
-        router.push("./singup");
+        router.push("./signup");
     }
 
     return (
@@ -52,22 +52,22 @@ export default function Login() {
 
             <View style={styles.content}>
                 <View style={styles.contentInput}>
-                    <EnvelopeSimple size={32} color="#757575" />
+                    <EnvelopeSimple size={32} color="#9C8A75" />
                     <TextInput
                         placeholder="Seu e-mail"
                         style={styles.input}
-                        placeholderTextColor="#757575"
+                        placeholderTextColor="#9C8A75"
                         value={email}
                         onChangeText={setEmail}
                     />
                 </View>
 
                 <View style={styles.contentInput}>
-                    <LockKey size={32} color="#757575" />
+                    <LockKey size={32} color="#9C8A75" />
                     <TextInput
                         placeholder="Sua senha"
                         style={styles.input}
-                        placeholderTextColor="#757575"
+                        placeholderTextColor="#9C8A75"
                         secureTextEntry
                         value={password}
                         onChangeText={setPassword}
@@ -87,11 +87,11 @@ export default function Login() {
 
             <View style={styles.footer}>
                 <TouchableOpacity style={styles.footerButton}>
-                    <GoogleLogo color="#1ab55c" size={32} weight="fill" />
+                    <GoogleLogo color="#6B8E23" size={32} weight="fill" />
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.footerButton}>
-                    <FacebookLogo color="#1ab55c" size={32} weight="fill" />
+                    <FacebookLogo color="#6B8E23" size={32} weight="fill" />
                 </TouchableOpacity>
             </View>
 
@@ -108,12 +108,12 @@ export default function Login() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#181a20",
+        backgroundColor: "#F5F5F5", // Branco puro de fundo
         alignItems: "center",
         paddingHorizontal: 20,
     },
     wellcome: {
-        color: "#f4f4f4",
+        color: "#5E503F", // Mocca escuro
         marginTop: 150,
         fontSize: 24,
         fontWeight: "600",
@@ -127,24 +127,36 @@ const styles = StyleSheet.create({
     contentInput: {
         width: "100%",
         height: 56,
-        backgroundColor: "#1f222a",
+        backgroundColor: "#F0E6D2", // Bege claro
         borderRadius: 12,
         flexDirection: "row",
         alignItems: "center",
         paddingHorizontal: 20,
         gap: 10,
     },
-    input: { flex: 1, color: "#f4f4f4" },
+    input: { 
+        flex: 1, 
+        color: "#5E503F", // Mocca escuro
+    },
     buttonSignIn: {
-        backgroundColor: "#1ab55c",
+        backgroundColor: "#6B8E23", // Oliva
         width: "100%",
         height: 56,
         borderRadius: 32,
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
+        shadowColor: "#6B8E23",
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 6,
+        elevation: 5,
     },
-    buttonSignInText: { color: "#f4f4f4", fontSize: 16, fontWeight: "800" },
+    buttonSignInText: { 
+        color: "#FFFFFF", // Branco puro
+        fontSize: 16, 
+        fontWeight: "800" 
+    },
     ContainerSeparator: {
         width: "100%",
         marginTop: 50,
@@ -155,11 +167,11 @@ const styles = StyleSheet.create({
     },
     separator: {
         height: 1,
-        backgroundColor: "#757575",
+        backgroundColor: "#E0D5C8", // Mocca claro
         flex: 1,
     },
     ContainerSeparatorText: {
-        color: "#f4f4f4",
+        color: "#9C8A75", // Mocca médio
         fontSize: 16,
         fontWeight: "400",
     },
@@ -167,23 +179,24 @@ const styles = StyleSheet.create({
         marginTop: 50,
         flexDirection: "row",
         gap: 10,
+        alignItems: "center",
     },
     footerButton: {
         width: 100,
         height: 60,
-        backgroundColor: "#1f222a",
+        backgroundColor: "#F0E6D2", // Bege claro
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 12,
     },
     footerText: {
-        color: "#f4f4f4",
+        color: "#5E503F", // Mocca escuro
         fontSize: 16,
         fontWeight: "400",
     },
     footerButtonText: {
-        color: "#1ab55c",
+        color: "#6B8E23", // Oliva
         fontSize: 16,
-        fontWeight: "400",
+        fontWeight: "600",
     },
 });
